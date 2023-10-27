@@ -1,12 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:bloodbank_donors/screens/donors/donor.dart';
-import 'package:bloodbank_donors/screens/hospitals/hospitals.dart';
-import 'package:bloodbank_donors/screens/profile/profile.dart';
+// import 'package:bloodbank_donors/screens/profile/profile.dart';
+import 'package:bloodbank_donors/screens/home/search_page/view/search_page.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/favouriates/views/hospital_view.dart';
+
 import '../screens/settings/settings.dart';
-import 'home.dart';
+import '../screens/home/home.dart';
 
 class HomeLayout extends StatefulWidget {
   static const String routeName = "homeLayout";
@@ -26,9 +28,10 @@ class _HomeLayoutState extends State<HomeLayout> {
       floatingActionButton: FloatingActionButton(
           backgroundColor:  Color.fromARGB(255, 116, 26, 26),
           onPressed: () {  
-         Navigator.pushNamed(context, ProfileScreen.routeName );
+      //   Navigator.pushNamed(context, ProfileScreen.routeName );
+       //  Navigator.pushNamed(context, FavouritesView.routeName );
          
-            //  showaddtaskbottomsheet();
+            
           },
           shape: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50),
@@ -37,7 +40,18 @@ class _HomeLayoutState extends State<HomeLayout> {
          
           )),
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text("Donor")),
+      appBar: AppBar(backgroundColor: Color.fromARGB(255, 116, 26, 26),
+        title: Text("Donors",style: TextStyle(fontSize: 25),),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(onTap: (){
+              Navigator.pushNamed(context, SearchPage.routeName);
+            },
+              child: Icon(Icons.search)),
+          ),
+        ],
+        ),
       bottomNavigationBar: BottomAppBar(
         notchMargin: 8,
         color: Colors.white,
@@ -78,7 +92,7 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   List<Widget> tabs = [
     HomeScreen(),
-      HospitalScreen(),
+      HospitalsView(),
     DonorScreen(),
   
     SettingsTab(),
