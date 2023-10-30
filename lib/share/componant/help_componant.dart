@@ -30,7 +30,7 @@ final Function() function;
                       onPressed: function,
                       child: Icon(
                         Icons.arrow_forward_ios_outlined,
-                        color: Colors.blue[800],
+                        color: AppColors.primary90,
                       ),
                     ),
                   ),
@@ -52,13 +52,6 @@ class Gesturebuton extends StatefulWidget {
 class _GesturebutonState extends State<Gesturebuton> {
    bool ispressed = false;
 
-  bool ispress = false;
-
-  bool isChecked = false;
-
-  bool ischeck = false;
-
-  bool ispree = false;
 
   @override
   Widget build(BuildContext context) {
@@ -73,8 +66,8 @@ class _GesturebutonState extends State<Gesturebuton> {
                     height: 37,
                     width: 100,
                     decoration: BoxDecoration(
-                        color: ispressed ? AppColors.primary : AppColors.white,
-                        border: Border.all(color: Colors.blue),
+                        color: ispressed ? AppColors.primary : Colors.transparent,
+                        border: Border.all(color: AppColors.grey30),
                         borderRadius: BorderRadius.all(
                           Radius.circular(25),
                         )),
@@ -85,8 +78,8 @@ class _GesturebutonState extends State<Gesturebuton> {
                           widget.txt,
                           style: TextStyle(
                             color: ispressed
-                                ? Color.fromARGB(255, 239, 242, 247)
-                                : Colors.blue[800],
+                                ?  AppColors.white 
+                                : AppColors.primary90,
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
@@ -110,13 +103,13 @@ final Widget widget;
             child: Container(
               decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.blue,
+                    color:AppColors.primary
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(12),
                   )),
-              child: ExpandablePanel(
-                header: Padding(
+              child: ExpandablePanel(theme: ExpandableThemeData(bodyAlignment: ExpandablePanelBodyAlignment.right, )
+                ,header: Padding(
                   padding: const EdgeInsets.only(left: 10, top: 10),
                   child: Text(
                   txt1,
@@ -126,8 +119,7 @@ final Widget widget;
                 collapsed: Padding(
                   padding: const EdgeInsets.only(left: 10),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                 
                     children: [
                       Text(
                        txt2,

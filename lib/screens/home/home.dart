@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:bloodbank_donors/screens/home/posts_item.dart';
+import 'package:bloodbank_donors/style/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'addpost_bottomsheet.dart';
@@ -30,29 +31,24 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "اكتب منشورك",
-                      style: TextStyle(color: Colors.black38,
-                      fontSize: 18,
+                      style: TextStyle(color:AppColors.grey60,
+                      fontSize: 15,
                       ),textAlign: TextAlign.right,
                       
                   
                     ),
                   ),
-                  width: MediaQuery.of(context).size.width * .8,
+                  width: MediaQuery.of(context).size.width *.8,
                   height: 37,
-                  decoration: BoxDecoration(
+                  decoration: BoxDecoration(border: Border.all(color: AppColors.primary),
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.black12,
+                    color: Colors.transparent,
                   ),
                 ),
               ),
-              Spacer(),
+             Spacer(),
               Container(
-                child: Icon(
-                  Icons.post_add_sharp,
-                  size: 40,
-                  color: Colors.grey[900],
-                ),
-              ),
+                child: ImageIcon(AssetImage("assets/images/write.png"),size: 50, color: AppColors.primary,)),
             ],
           ),
           SizedBox(

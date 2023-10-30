@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sort_child_properties_last
 
+import 'package:bloodbank_donors/style/colors.dart';
 import 'package:flutter/material.dart';
 
 class PostsItem extends StatelessWidget {
@@ -8,7 +9,7 @@ class PostsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
+      color: Colors.transparent,
       width: MediaQuery.of(context).size.width *.2,
       height: MediaQuery.of(context).size.height *.4,
       child: Column(
@@ -18,32 +19,35 @@ class PostsItem extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    // ignore: prefer_const_constructors
-                    Text("هدير مدحت",
-                        style: TextStyle(
-                          fontSize: 20,
-                        )),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Icon(
-                          Icons.public,
-                          size: 17,
-                        ),
-                        Text("منذ دقائق",
-                            style: TextStyle(
-                              fontSize: 13,
-                            )),
-                      ],
-                    ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      // ignore: prefer_const_constructors
+                      Text("هدير مدحت",
+                          style: TextStyle(
+                            fontSize: 20,
+                          )),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Icon(
+                            Icons.public,
+                            size: 13,
+                          ),SizedBox(width: 5,),
+                          Text("منذ دقائق",
+                              style: TextStyle(
+                                fontSize: 12,
+                              )),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 CircleAvatar(
                   backgroundImage: AssetImage("assets/images/profile_icon.png"),
-                  maxRadius: 30,
+                  maxRadius: 20,
                   backgroundColor: Colors.grey,
                 ),
               ],
@@ -87,7 +91,7 @@ class PostsItem extends StatelessWidget {
                     height: 25,
                     width: 40,
                     child: Image(
-                      image: AssetImage("assets/images/comment.jpg"),
+                      image: AssetImage("assets/images/comment.png",),
                     ),
                   ),
                 ],
@@ -95,10 +99,10 @@ class PostsItem extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                    height: 25,
-                    width: 40,
+                    height: 30,
+                    width: 50,
                     child: Image(
-                      image: AssetImage("assets/images/singleLike.jpg"),
+                      image: AssetImage("assets/images/singleLike.png"),
                     ),
                   ),
                 ],

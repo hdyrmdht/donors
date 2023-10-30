@@ -64,7 +64,7 @@ class FavouriteHospitalCard extends StatelessWidget {
                 children: [
                   const Icon(//Remix.star_half_s_fill,
                   Icons.star_border,
-                      color: AppColors.primary400),
+                      color: AppColors.primary),
                   Text(
                     review,
                     style: TextStyle(
@@ -100,7 +100,7 @@ class FavouriteHospitalCard extends StatelessWidget {
             height: 40,
             width: 40,
             decoration: BoxDecoration(
-                color: AppColors.primary100,
+                color: AppColors.primary,
                 borderRadius: BorderRadius.circular(10)),
             child: Center(
               child: Image.asset(

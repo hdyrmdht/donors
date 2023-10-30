@@ -44,7 +44,7 @@ class _HospitalsViewState extends State<HospitalsView> {
                   child: const Icon(
                     Icons.local_hospital_rounded,
                     // Remix.filter_3_fill,
-                    color: AppColors.primary400,
+                    color: AppColors.primary60,
                   )),
             ],
           )
@@ -119,14 +119,14 @@ class _HospitalsViewState extends State<HospitalsView> {
                                       borderRadius: const BorderRadius.all(
                                           Radius.circular(25)),
                                       border: Border.all(
-                                          color: AppColors.primary800,
+                                         // color: AppColors.primary800,
                                           style: BorderStyle.solid),
                                     ),
                                     child: Center(
                                       child: Text(
                                         'Cancel',
                                         style: TextStyle(
-                                            color: AppColors.primary800,
+                                         //   color: AppColors.primary800,
                                             fontSize: 16,
                                             fontWeight: FontWeight.w600),
                                       ),
@@ -139,11 +139,11 @@ class _HospitalsViewState extends State<HospitalsView> {
                                     height: 50,
                                     width: 150,
                                     decoration: BoxDecoration(
-                                      color: AppColors.primary800,
+                                   //   color: AppColors.primary800,
                                       borderRadius: const BorderRadius.all(
                                           Radius.circular(25)),
                                       border: Border.all(
-                                          color: AppColors.primary800,
+                                      //    color: AppColors.,
                                           style: BorderStyle.solid),
                                     ),
                                     child: Center(

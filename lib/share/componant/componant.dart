@@ -1,3 +1,4 @@
+import 'package:bloodbank_donors/style/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../layout/home_layout.dart';
@@ -22,7 +23,7 @@ final Function() function;
                     ),
                     child: Icon(
                       icon,
-                      color: Colors.blue[800],
+                      color:AppColors.primary60,
                     ),
                     
                   ),
@@ -44,7 +45,7 @@ final Function() function;
                     minWidth: 6,
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,
-                      color: Colors.blue[800],
+                      color: AppColors.primary60,
                     ),
                     onPressed: function
                  
@@ -76,7 +77,7 @@ showbutnheet(BuildContext context){
                                 children: [
                                   Icon(
                                     Icons.login_rounded,
-                                    color: Colors.blue,
+                                    color:AppColors.primary,
                                     size: 35,
                                   ),
                                   SizedBox(
@@ -93,7 +94,7 @@ showbutnheet(BuildContext context){
                                         Container(
                                           decoration: BoxDecoration(
                                               border: Border.all(
-                                                color: Colors.blue,
+                                                color: Colors.white,
                                               ),
                                               borderRadius: BorderRadius.all(
                                                 Radius.circular(25),
@@ -110,7 +111,7 @@ showbutnheet(BuildContext context){
                                               child: Text(
                                                 'Cancel',
                                                 style: TextStyle(
-                                                  color: Colors.blue,
+                                                  color:AppColors.primary,
                                                   fontSize: 15,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -123,7 +124,7 @@ showbutnheet(BuildContext context){
                                         ),
                                         Material(
                                           elevation: 5,
-                                          color: Colors.blue[700],
+                                          color: AppColors.primary60,
                                           borderRadius:
                                               BorderRadius.circular(25),
                                           child: MaterialButton(

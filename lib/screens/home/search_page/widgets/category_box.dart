@@ -17,10 +17,10 @@ class CategoryBox extends StatelessWidget {
         vertical: 4.0,
       ),
       decoration: BoxDecoration(
-          color: isCurrent ? AppColors.primary800 : AppColors.white,
+          color: isCurrent ? AppColors.primary : AppColors.white,
           borderRadius: BorderRadius.circular(16.0),
           border: Border.all(
-            color: AppColors.primary800,
+            color: AppColors.primary,
             style: BorderStyle.solid
           )
           ),
@@ -30,7 +30,7 @@ class CategoryBox extends StatelessWidget {
           child: Text(
             "All",
             style: TextStyle(
-              color: Colors.black, fontSize: 12, fontWeight: FontWeight.w500),
+              color: Colors.black54, fontSize: 12, fontWeight: FontWeight.w500),
           )),
     );
   }

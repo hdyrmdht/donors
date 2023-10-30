@@ -2,6 +2,7 @@
 
 
 import 'package:bloodbank_donors/share/componant/componant.dart';
+import 'package:bloodbank_donors/style/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'helppage/HelpPage.dart';
@@ -71,11 +72,49 @@ class _SettingsTabState extends State<SettingsTab> {
                 color: Color.fromARGB(255, 230, 218, 218),
               ),
             ),
-            Settingsfields(
-                icon: Icons.supervised_user_circle_outlined,
-                text: 'Invite Friends',
-                function: () {  
-                }),
+      Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 14),
+                  child: Container(width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.grey[300],
+                    ),
+                    child: Icon(
+                      Icons.people_alt,
+                      color: AppColors.primary60,
+                    ),
+                    
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                " invite Friends",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 14),
+                  child: MaterialButton(
+                    minWidth: 6,
+                    child: Icon(
+                      Icons.share,
+                      color: AppColors.primary60,
+                    ),
+                    onPressed: (){}
+                 
+                  ),
+                ),
+              ],
+            ), 
             SizedBox(
               height: 40,
               width: 310,
